@@ -1,6 +1,6 @@
 # Vite React Application
 
-This is a simple React application built with Vite that displays detailed information for a selected user.
+This is a simple React application built with Vite that serves as a user interface for fetching and displaying user data. The application consists of two main screens: the User List screen and the User Profile screen.
 
 ## Getting Started
 
