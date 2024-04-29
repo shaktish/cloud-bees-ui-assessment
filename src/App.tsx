@@ -1,6 +1,6 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router";
-import UserList from "./pages/user_list/user_list";
+import UserList from "./pages/user_list/user_list02";
 import MainLayout from "./pages/main_layout/Mainlayout";
 import { ThemeProvider } from "@mui/material";
 import theme from "./theme/theme";
@@ -10,6 +10,7 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "./App.css";
+import Greet from "./components/greet";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Routes>
             <Route path="/" Component={UserList} />
             <Route path="/user/:id" Component={UserProfile} />
+            <Route path="/greet" Component={Greet} />
           </Routes>
         </MainLayout>
       </Router>

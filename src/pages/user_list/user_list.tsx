@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import { Grid, Button, Avatar, Box, Divider } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-import "./style.css";
+// import "./style.css";
 import Loader from "../../components/loader";
 import ErrorMessage from "../../components/errorMessage";
 
@@ -47,6 +47,15 @@ const UserList = () => {
       <Typography variant="h5" marginBottom={1}>
         Users List
       </Typography>
+      {/* <Card
+        data-testid="user-card"
+        sx={{ maxWidth: 240 }}
+        className="user-card"
+        role={"listitem"}
+      >
+        {" "}
+        ss
+      </Card> */}
       <Divider orientation="horizontal" sx={{ marginBottom: "20px" }} />
       {loading && <Loader />}
       {error && <ErrorMessage />}
@@ -56,7 +65,13 @@ const UserList = () => {
           users &&
           users.map((user) => (
             <Grid item xs={4} lg={4} key={user.id}>
-              <Card sx={{ maxWidth: 240 }} key={user.id} className="user-card">
+              <Card
+                data-testid="user-card"
+                sx={{ maxWidth: 240 }}
+                key={user.id}
+                className="user-card"
+                role={"listitem"}
+              >
                 <Box className="user-image-wrapper">
                   <Avatar
                     src={user.avatar_url}
