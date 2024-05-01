@@ -35,7 +35,6 @@ describe("User list", () => {
         </Router>
       );
     });
-    screen.debug();
     const loadingState = await screen.findByText("Loading...");
 
     expect(loadingState).toBeInTheDocument();
