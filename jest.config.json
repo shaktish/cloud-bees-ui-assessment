@@ -14,5 +14,8 @@
   "coverageDirectory": "./coverage",
   "testEnvironmentOptions": {
     "customExportConditions": [""]
+  },
+  "moduleNameMapper": {
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy"
   }
 }
