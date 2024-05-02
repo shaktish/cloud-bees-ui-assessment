@@ -11,6 +11,7 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "./App.css";
 import Greet from "./components/greet";
+import Dashboard from "./pages/dashboard/dashboard";
 
 const App = () => {
   return (
@@ -18,9 +19,10 @@ const App = () => {
       <Router>
         <MainLayout>
           <Routes>
-            <Route path="/" Component={Greet} />
+            <Route path="/" Component={Dashboard} />
             <Route path="/user/:id" Component={UserProfile} />
             <Route path="/user-list" Component={UserList} />
+            <Route path="/greet" Component={Greet} />
           </Routes>
         </MainLayout>
       </Router>
