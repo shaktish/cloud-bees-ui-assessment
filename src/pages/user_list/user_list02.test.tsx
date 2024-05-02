@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { server } from "../../mocks/server";
 import { delay, http, HttpResponse } from "msw";
 
-describe("User list", () => {
+describe("User list - simple", () => {
   test("Renders the component with users", async () => {
     await act(async () => {
       render(
@@ -21,10 +21,6 @@ describe("User list", () => {
     server.use(
       http.get("https://api.github.com/users", async () => {
         await delay(3000);
-        // return HttpResponse.json([
-        //   { id: 1, login: "test" },
-        //   { id: 1, login: "test2" },
-        // ]);
       })
     );
 

@@ -1,6 +1,6 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router";
-import UserList from "./pages/user_list/user_list02";
+import UserList from "./pages/user_list/user_list";
 import MainLayout from "./pages/main_layout/Mainlayout";
 import { ThemeProvider } from "@mui/material";
 import theme from "./theme/theme";
@@ -18,9 +18,9 @@ const App = () => {
       <Router>
         <MainLayout>
           <Routes>
-            <Route path="/" Component={UserList} />
+            <Route path="/" Component={Greet} />
             <Route path="/user/:id" Component={UserProfile} />
-            <Route path="/greet" Component={Greet} />
+            <Route path="/user-list" Component={UserList} />
           </Routes>
         </MainLayout>
       </Router>
